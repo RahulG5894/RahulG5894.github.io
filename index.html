@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <main class="main-container">
+        <h1 id="main-heading">Password Generator</h1>
+        <p class="display" id="displayValue">
+            CLICK GENERATE
+        </p>
+        <p style="font-size: 10px;">LENGTH <span id="updatedLength"></span></p>
+        <div class="scroller">
+                <p>4</p>
+                <input id="myRange" type="range" min="4" value="16" max="32">
+                <p>32</p>
+        </div>
+        <p id="settings">SETTINGS</p>
+        <div class="selector">
+            <p>Include UpperCase</p>
+            <label class="switch">
+                <input id="UpperCase" type="checkbox" value="1">
+                <span class="slider round"></span>
+            </label>          
+        </div>
+        <div class="selector">
+            <p>Include Lowercase</p>
+            <label class="switch">
+                <input id="LowerCase" type="checkbox" value="2">
+                <span class="slider round"></span>
+            </label>            
+        </div>
+        <div class="selector">
+            <p>Include Numbers</p>
+            <label class="switch">
+                <input id="Numbers" type="checkbox" value="3">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="selector">
+            <p>Include Symbols</p>
+            <label class="switch">
+                <input id="Special" type="checkbox" value="4">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <button class="generate-button" onclick="generate()">GENERATE PASSWORD</button>
+    </main>
+</body>
+</html>
